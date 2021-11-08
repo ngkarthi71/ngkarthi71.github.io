@@ -2085,7 +2085,7 @@ input, select, textarea {
     }
 
     .card_text {
-      font-size: 0.875rem;
+      font-size: 16px;
       line-height: 1.5;
       margin-bottom: 1.25rem;
       font-weight: 400;
@@ -2096,6 +2096,15 @@ input, select, textarea {
        position: relative;
        width: 100%;
      }
+
+    .overlay_text {
+      font-size: 16px;
+      background-color: #002C19;
+      padding: 16px 32px;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+    }
 
      /* Original image */
      .overlay-image .image {
@@ -2117,6 +2126,24 @@ input, select, textarea {
        transform: translate(-50%, -50%);
        width: 100%;
      }
+
+     .middle {
+       transition: .5s ease;
+       opacity: 0;
+       left: 50%;
+     }
+
+     .card:hover {
+     	background-color: #C2FFFF;
+     }
+
+    .card:hover .overlay-image {
+      opacity: 0.7;
+    }
+
+    .card:hover .middle {
+      opacity: 1;
+    }
 
 /* Timeline */
 
@@ -3789,3 +3816,7 @@ input, select, textarea {
 			}
 
 	}
+
+	html {
+      scroll-behavior: smooth;
+    }
